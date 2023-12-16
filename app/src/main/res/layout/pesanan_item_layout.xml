@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="12dp"
+    android:layout_marginBottom="8dp"
+    android:gravity="start"
+    android:background="@drawable/histoty_card_wrapper"
+    android:paddingVertical="6dp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="50dp"
+        android:layout_gravity="center"
+        android:innerRadius="0dp"
+        android:layout_marginRight="12dp"
+        app:cardCornerRadius="4dp"
+        app:strokeColor="@color/white"
+        android:shape="ring"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/cardImageIV"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="12sp"
+            android:id="@+id/wahanaNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Malang Night Paradise" />
+
+        <TextView
+            android:id="@+id/buyerNameTV"
+            android:textColor="#74696D"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/visitorNameTV"
+            android:textColor="#74696D"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dateAndTimeTV"
+            android:textColor="#74696D"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
+</LinearLayout>

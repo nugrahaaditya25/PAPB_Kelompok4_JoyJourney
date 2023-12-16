@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "248466014884",
+    "project_id": "joyjourney-45019",
+    "storage_bucket": "joyjourney-45019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248466014884:android:a100094e90e631fef81c31",
+        "android_client_info": {
+          "package_name": "com.example.joyjourney"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248466014884-3nkjfl3nj4imc6rghq54sr8u96di54i4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.joyjourney",
+            "certificate_hash": "44be249301d0063aa7cfe851fffb96f803dfeed4"
+          }
+        },
+        {
+          "client_id": "248466014884-fv2dgpnm1ebljc93e4t5luab4bre8qs1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPhYQQIM_YjaYE5kZn-Dg3vHJwLre-bOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "248466014884-fv2dgpnm1ebljc93e4t5luab4bre8qs1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

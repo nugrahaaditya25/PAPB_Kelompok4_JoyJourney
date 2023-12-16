@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".admin.DetailWahanaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/backButton"
+                android:clickable="true"
+                android:elevation="1dp"
+                android:background="@drawable/circle_button"
+                android:padding="10dp"
+                android:onClick="onBackButtonClcked"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="BackButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+            <TextView
+                android:layout_marginTop="16dp"
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="22sp"
+                android:text="katalog paket wisatamu" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:textColor="#74696D"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"
+                android:text="Berikut adalah list dari katalog paket wisata yang telah kamu publish" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="16dp"
+                android:id="@+id/addKatalogButton"
+                android:background="@drawable/primary_button"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"
+                android:text="Tambah Katalog" />
+
+            <EditText
+                android:drawableRight="@drawable/ic_search"
+                android:layout_marginTop="16dp"
+                android:imeOptions="actionSearch"
+                android:background="@drawable/custom_input"
+                android:id="@+id/editTextText"
+                android:layout_width="match_parent"
+                android:padding="12dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textStyle="normal"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#61646B"
+                android:inputType="text"
+                android:hint="Cari Katalog Wahana disini!" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/recycler"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            tools:listitem="@layout/katalog_item_layout"
+            />
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_marginTop="24dp"
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="22sp"
+                android:layout_height="wrap_content"
+                android:text="Selamat Datang, Admin!" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:textColor="#74696D"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_height="wrap_content"
+                android:text="Kelola katalog produkmu di dashboard ini" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="22sp"
+                android:layout_height="wrap_content"
+                android:text="katalog paket wisatamu" />
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:textColor="#74696D"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_height="wrap_content"
+                android:text="Berikut adalah list dari katalog paket wisata yang telah kamu publish" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recycler"
+                android:layout_marginTop="12dp"
+                tools:listitem="@layout/katalog_item_layout"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:id="@+id/showAllButton"
+                android:textAllCaps="false"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/secondary_button"
+                android:layout_marginTop="12dp"
+                android:text="Lihat Semua"
+                android:textColor="@color/primary"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

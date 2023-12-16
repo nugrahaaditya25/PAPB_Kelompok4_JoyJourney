@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".admin.HistoryFragment">
+
+    <LinearLayout
+        android:elevation="2dp"
+        android:paddingVertical="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"
+            android:text="History Pesanan" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="14sp"
+            android:textColor="#74696D"
+            android:layout_height="wrap_content"
+            android:text="Berikut adalah list dari history pesanan yang masuk dari pembeli" />
+
+        <EditText
+            android:id="@+id/historyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:drawableRight="@drawable/ic_search"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Cari histori pesanan disini!"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="#61646B"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRecycler"
+        android:layout_width="match_parent"
+        tools:listitem="@layout/pesanan_item_layout"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

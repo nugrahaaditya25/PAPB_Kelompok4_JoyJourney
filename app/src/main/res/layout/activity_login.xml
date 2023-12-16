@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitXY"
+            android:scaleY="1.5"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/signup_illustration" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Selamat Datang di JoyJourney"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="14sp"
+            android:textColor="@color/textSecondary"
+            android:layout_marginTop="16dp"
+            android:text="Silahkan masukkan email dan password"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            app:hintEnabled="false"
+            android:id="@+id/emaillayout"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_marginTop="8dp"
+                android:id="@+id/emailEditText"
+                android:background="@drawable/custom_input"
+                android:layout_width="match_parent"
+                android:padding="12dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textStyle="normal"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#61646B"
+                android:textSize="16sp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/passwordLayout"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/emaillayout"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_marginTop="18dp"
+                android:background="@drawable/custom_input"
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:padding="12dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textStyle="normal"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#61646B"
+                android:textSize="16sp"
+                android:hint="Password"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:id="@+id/masukButton"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="16sp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginHorizontal="38dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/user_primary_button"
+            android:text="Masuk"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/passwordLayout"
+            android:textColor="@color/white"
+            android:textAllCaps="false"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/masukButton"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:textColor="@color/textSecondary"
+                android:layout_height="wrap_content"
+                android:text="Belum punya akun?"/>
+            <Button
+                android:id="@+id/daftarButton"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="Daftar"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

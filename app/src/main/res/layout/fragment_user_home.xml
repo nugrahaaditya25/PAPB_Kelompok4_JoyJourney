@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".user.UserHomeFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:paddingVertical="40dp"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="16dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/topsection_background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="40dp"
+                        app:cardCornerRadius="100dp"
+                        android:backgroundTint="@color/white"
+                        app:strokeColor="@color/white"
+                        android:layout_height="40dp">
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/person" />
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <EditText
+                        android:layout_marginHorizontal="8dp"
+                        android:id="@+id/textView14"
+                        android:drawableLeft="@drawable/ic_search"
+                        android:paddingLeft="8dp"
+                        android:background="@drawable/user_custom_input2"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="#BBBBBB"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Cari apa?"/>
+
+                    <ImageButton
+                        android:id="@+id/notificationButton"
+                        android:layout_width="48dp"
+                        android:backgroundTint="@color/primary"
+                        android:layout_height="48dp"
+                        android:contentDescription="notif"
+                        android:src="@drawable/ic_notification" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="14sp"
+                    android:textFontWeight="600"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nikmati Petualanganmu \ndengan Lebih Mudah dan Seru!" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:paddingVertical="24dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Explore Malang!"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="8dp"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:orientation="horizontal"
+                        android:id="@+id/recycler1"
+                        android:layout_width="match_parent"
+                        tools:listitem="@layout/katalog_item_layout"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rekomendasi Pilihan"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="8dp"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:id="@+id/recycler2"
+                        tools:listitem="@layout/katalog_item_layout"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Terdekat"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="8dp"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:orientation="horizontal"
+                        android:id="@+id/recycler3"
+                        android:layout_width="match_parent"
+                        tools:listitem="@layout/katalog_item_layout"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
